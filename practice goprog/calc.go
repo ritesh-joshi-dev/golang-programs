@@ -21,14 +21,26 @@ func main() {
 	fmt.Printf("%d * %d is %d\n", num1, num2, product)
 
 	// / divide two integer variables
-	quotient := num1 / num2
-	fmt.Printf("%d / %d = %d\n", num1, num2, quotient)
+	if num2 != 0 {
+		quotient := num1 / num2
+		fmt.Printf("%d / %d = %d\n", num1, num2, quotient)
+	} else {
+		fmt.Println(" num2 must be non zero value")
+	}
 
 	// % modulo-divides two variables
-	remainder := num1 % num2
-	fmt.Printf("%d %% %d = %d\n", num1, num2, remainder)
+	if num2 != 0 {
+		remainder := num1 % num2
+		fmt.Printf("%d %% %d = %d\n", num1, num2, remainder)
+	} else {
+		fmt.Println(" num2 must be non zero value")
+	}
 
 	// / divide two floating point variables
-	result := float32(num1) / float32(num2)
-	fmt.Printf(" Floaating point division of %d / %d = %g\n", num1, num2, result)
+	if num2 != 0 {
+		result := float32(num1) / float32(num2)
+		fmt.Printf("Floating point division of %d / %d = %g\n", num1, num2, result)
+	} else {
+		fmt.Println(" num2 must be non zero value")
+	}
 }
